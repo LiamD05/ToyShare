@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @toy_status %>
+
+<div>
+  <%= link_to "Edit this toy status", edit_toy_status_path(@toy_status) %> |
+  <%= link_to "Back to toy statuses", toy_statuses_path %>
+
+  <%= button_to "Destroy this toy status", @toy_status, method: :delete %>
+</div>

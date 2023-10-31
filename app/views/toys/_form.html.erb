@@ -1,0 +1,33 @@
+<%= form_with(model: toy) do |form| %>
+  <!-- makes a form with a toy model -->
+  <% if toy.errors.any? %>
+  <!-- if there are any errors? -->
+    <div style="color: red">
+    <!-- makes the color red -->
+      <h2><%= pluralize(toy.errors.count, "error") %> prohibited this toy from being saved:</h2>
+      <!-- counts the amount of errors that there are and prints it out. -->
+      <ul>
+        <% toy.errors.each do |error| %>
+          <!-- for each error do -->
+          <li><%= error.full_message %></li>
+          <!-- display full error -->
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :toy_type_id, style: "display: block" %>
+    <%= form.collection_select :toy_type_id, ToyType.all, :id, :name %>
+  </div>
+
+  <div>
+    <%= form.label :toy_status_id, style: "display: block" %>
+    <%= form.collection_select :toy_status_id, ToyStatus.all, :id, :name %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+    <!-- submits form -->
+  </div>
+<% end %>

@@ -1,0 +1,16 @@
+<h1>Editing toy reservation</h1>
+<!-- Displays a level 1 heading "Editing toy reservation". -->
+
+<%= render "form", toy_reservation: @toy_reservation %>
+<!-- Renders a partial template named "_form" and passes the `@toy_reservation` variable to it. This is typically used to render a form for editing a toy reservation. -->
+
+<br>
+
+<div>
+  <%= link_to "Show this toy reservation", @toy_reservation %> |
+  <!-- Creates a hyperlink labeled "Show this toy reservation" that links to the show action of the specific toy reservation object. The `@toy_reservation` variable represents the current toy reservation object. -->
+
+  <%= link_to "Back to toy reservations", toy_reservations_path %>
+  <!-- Creates a hyperlink labeled "Back to toy reservations" that links to the index action of the toy reservations resource. The `toy_reservations_path` helper method is used to generate the URL for the index action. -->
+</div>
+

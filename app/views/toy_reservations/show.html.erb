@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @toy_reservation %>
+
+<div>
+  <%= link_to "Edit this toy reservation", edit_toy_reservation_path(@toy_reservation) %> |
+  <%= link_to "Back to toy reservations", toy_reservations_path %>
+
+  <%= button_to "Destroy this toy reservation", @toy_reservation, method: :delete %>
+</div>

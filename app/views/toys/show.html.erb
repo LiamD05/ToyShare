@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+<!-- makes a green notice when the toy is edited -->
+
+<%= render @toy %>
+<!-- renders toy -->
+
+<div>
+  <%= link_to "Edit this toy", edit_toy_path(@toy) %> |
+  <!-- makes a link to the edit toy page for this toy: toys/id/edit-->
+
+  <%= link_to "Back to toys", toys_path %>
+  <!-- makes a link to go back to toys page -->
+
+  <%= button_to "Destroy this toy", @toy, method: :delete %>
+  <!-- makes a button to destroy a toy -->
+</div>

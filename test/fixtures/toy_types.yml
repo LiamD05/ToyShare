@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  min_age: 1
+  max_age: 1
+  weight: 1
+  size: MyString
+  quantity: 1
+
+two:
+  name: MyString
+  min_age: 1
+  max_age: 1
+  weight: 1
+  size: MyString
+  quantity: 1

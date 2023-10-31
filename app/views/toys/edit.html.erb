@@ -1,0 +1,16 @@
+<h1>Editing toy</h1>
+<!-- makes a header called "Editing toy" -->
+
+<%= render "form", toy: @toy %>
+<!-- renders a form for a toy. The form file is located in _form.html.erb -->
+
+<br>
+<!-- makes a line brake -->
+
+<div>
+  <%= link_to "Show this toy", @toy %> |
+  <!-- makes a link to a toy -->
+
+  <%= link_to "Back to toys", toys_path %>
+  <!-- makes a link to the toys -->
+</div>

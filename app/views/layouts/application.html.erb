@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Toyshare</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="<%= root_path %>">ToyShare</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="<%= toy_reservations_path %>">Toy Reservations</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="<%= toy_statuses_path %>">Toy Statuses</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="<%= toys_path %>">Toys</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="<%= toy_types_path %>">Toy Types</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="<%= user_locations_path %>">User Locations</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="<%= users_path %>">Users</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="<%= locations_path %>">Locations</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <%= yield %>
+  </body>
+</html>

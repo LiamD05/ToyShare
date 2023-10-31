@@ -1,0 +1,47 @@
+<%= form_with(model: toy_type) do |form| %>
+  <% if toy_type.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(toy_type.errors.count, "error") %> prohibited this toy_type from being saved:</h2>
+
+      <ul>
+        <% toy_type.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :min_age, style: "display: block" %>
+    <%= form.number_field :min_age %>
+  </div>
+
+  <div>
+    <%= form.label :max_age, style: "display: block" %>
+    <%= form.number_field :max_age %>
+  </div>
+
+  <div>
+    <%= form.label :weight, style: "display: block" %>
+    <%= form.number_field :weight %>
+  </div>
+
+  <div>
+    <%= form.label :size, style: "display: block" %>
+    <%= form.text_field :size %>
+  </div>
+
+  <div>
+    <%= form.label :quantity, style: "display: block" %>
+    <%= form.number_field :quantity %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

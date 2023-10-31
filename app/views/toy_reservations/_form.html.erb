@@ -1,0 +1,39 @@
+<%= form_with(model: toy_reservation) do |form| %>
+  <% if toy_reservation.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(toy_reservation.errors.count, "error") %> prohibited this toy_reservation from being saved:</h2>
+
+      <ul>
+        <% toy_reservation.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :user_id, style: "display: block" %>
+    <%= form.collection_select :user_id, User.all, :id, :name %>
+
+  </div>
+
+  <div>
+    <%= form.label :toy_type_id, style: "display: block" %>
+    <%= form.collection_select :toy_type_id, ToyType.all, :id, :name %>
+
+  </div>
+
+  <div>
+    <%= form.label :fulfilled, style: "display: block" %>
+    <%= form.check_box :fulfilled %>
+  </div>
+
+  <div>
+    <%= form.label :start_date, style: "display: block" %>
+    <%= form.datetime_field :start_date %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

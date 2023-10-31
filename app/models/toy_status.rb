@@ -1,0 +1,2 @@
+class ToyStatus < ApplicationRecord
+end

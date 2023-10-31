@@ -1,0 +1,15 @@
+<h1>Editing toy type</h1>
+<!-- This line displays a level 1 heading "Editing toy type". -->
+
+<%= render "form", toy_type: @toy_type %>
+<!-- This line renders a partial template named "_form" and passes the `@toy_type` variable to it. This is typically used to render a form for editing a toy type. -->
+
+<br>
+
+<div>
+  <%= link_to "Show this toy type", @toy_type %> |
+  <!-- This line creates a hyperlink labeled "Show this toy type" that links to the show action of the specific toy type object. The `@toy_type` variable represents the current toy type object. -->
+
+  <%= link_to "Back to toy types", toy_types_path %>
+  <!-- This line creates a hyperlink labeled "Back to toy types" that links to the index action of the toy types resource. The `toy_types_path` helper method is used to generate the URL for the index action. -->
+</div>

@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  toy_type: one
+  fulfilled: false
+  start_date: 2023-07-07 19:01:35
+
+two:
+  user: two
+  toy_type: two
+  fulfilled: false
+  start_date: 2023-07-07 19:01:35

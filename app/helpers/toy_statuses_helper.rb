@@ -1,0 +1,2 @@
+module ToyStatusesHelper
+end

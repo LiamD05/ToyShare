@@ -1,0 +1,22 @@
+<p style="color: green"><%= notice %></p>
+<!-- makes a green notice that displays a message saying that the toy had been created or edited -->
+
+<h1>Toys</h1>
+<!-- Displays a heading "Toys". -->
+
+<div id="toys">
+  <% @toys.each do |toy| %>
+    <!-- gets each toy to do what is below -->
+
+    <%= render toy %>
+    <!-- Renders a partial template for each toy object, using the `toy` variable. The partial template displays the type and status and is located in _toy.html.erb -->
+
+    <p>
+      <%= link_to "Show this toy", toy %>
+      <!-- Creates a hyperlink to the `show` action of the specific toy object. The link text is set as "Show this toy". -->
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New toy", new_toy_path %>
+<!-- Creates a hyperlink to the `new` action for creating a new toy object. The link text is set as "New toy". The `new_toy_path` points to toys/new-->
